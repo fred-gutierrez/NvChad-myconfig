@@ -37,6 +37,38 @@ local plugins = {
       },
     },
   },
+  {
+    "hrsh7th/nvim-cmp",
+    opts = {
+      sources = {
+        { name = "nvim_lsp" },
+        { name = "luasnip" },
+        { name = "buffer" },
+        { name = "nvim_lua" },
+        { name = "path" },
+        { name = "cmp_tabnine" },
+      },
+    },
+
+    dependencies = {
+      {
+        "tzachar/cmp-tabnine",
+        build = "powershell ./install.ps1",
+        config = function()
+          local tabnine = require "cmp_tabnine.config"
+          tabnine:setup {
+            disable_auto_comment = true,
+            accept_keymap = "<Tab>",
+            dismiss_keymap = "<C-]>",
+            debounce_ms = 800,
+            suggestion_color = { gui = "#808080", cterm = 244 },
+            exclude_filetypes = { "TelescopePrompt" },
+            log_file_path = nil, -- absolute path to Tabnine log file
+          } -- put your options here
+        end,
+      },
+    },
+  },
 }
 
 return plugins
