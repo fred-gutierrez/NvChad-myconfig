@@ -18,6 +18,8 @@ local plugins = {
     opts = {
       ensure_installed = {
         -- LSP's
+        "svelte-language-server",
+        "json-lsp",
         "css-lsp",
         "cssmodules-language-server",
         "html-lsp",
@@ -27,7 +29,6 @@ local plugins = {
         "typescript-language-server",
         "vue-language-server",
         -- DAP's
-        "js-debug-adapter",
         -- Linters
         "quick-lint-js",
         -- Formatters
@@ -37,7 +38,6 @@ local plugins = {
       },
     },
   },
-  
 }
 
 return plugins
