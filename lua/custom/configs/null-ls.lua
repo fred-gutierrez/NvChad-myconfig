@@ -6,14 +6,15 @@ local formatting = null_ls.builtins.formatting
 local lint = null_ls.builtins.diagnostics
 
 local sources = {
-   formatting.prettier,
-   formatting.stylua,
-
-   lint.shellcheck,
+  formatting.stylua,
+  formatting.prettier.with {
+    -- https://github.com/sveltejs/prettier-plugin-svelte
+    filetypes = { "svelte" },
+  },
+  lint.shellcheck,
 }
 
 null_ls.setup {
-   debug = true,
-   sources = sources,
+  debug = true,
+  sources = sources,
 }
-
