@@ -7,6 +7,7 @@ local lint = null_ls.builtins.diagnostics
 
 local sources = {
   formatting.stylua,
+  formatting.prettier,
   formatting.prettier.with {
     -- https://github.com/sveltejs/prettier-plugin-svelte
     filetypes = { "svelte" },
