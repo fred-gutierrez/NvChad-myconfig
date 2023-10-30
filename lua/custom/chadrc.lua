@@ -1,7 +1,7 @@
 ---@type ChadrcConfig
 local M = {}
 M.ui = {
-  theme = "oceanic-next",
+  theme = "nightowl",
   transparency = true,
 
   statusline = {
@@ -11,7 +11,6 @@ M.ui = {
     load_on_startup = true,
   },
 }
--- themes i like: oceanic-next - nightfox
 
 M.mappings = require "custom.mappings"
 M.plugins = "custom.plugins"
