@@ -2,6 +2,33 @@ local overrides = require "custom.configs.overrides"
 
 local plugins = {
   {
+    "kylechui/nvim-surround",
+    version = "*",
+    event = "VeryLazy",
+    opts = {},
+  },
+  {
+    "Wansmer/treesj",
+    keys = {
+      {
+        "<leader>m",
+        "<CMD>TSJToggle<CR>",
+        desc = "Toggle Treesitter Join",
+      },
+    },
+    cmd = { "TSJToggle", "TSJSplit", "TSJJoin" },
+    opts = { use_default_keymaps = false },
+  },
+  {
+    "f-person/git-blame.nvim",
+    event = "VeryLazy",
+  },
+  {
+    "folke/todo-comments.nvim",
+    opts = {},
+    event = "VeryLazy",
+  },
+  {
     "christoomey/vim-tmux-navigator",
     lazy = false,
   },
