@@ -12,6 +12,9 @@ local sources = {
     -- https://github.com/sveltejs/prettier-plugin-svelte
     filetypes = { "svelte" },
   },
+  formatting.sql_formatter,
+  formatting.clang_format,
+
   lint.shellcheck,
 }
 

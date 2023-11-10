@@ -32,10 +32,12 @@ M.mason = {
     "tailwindcss-language-server",
     "typescript-language-server",
     "vue-language-server",
+    "clangd",
     -- Linters
     "eslint_d",
     -- Formatters
     "sql-formatter",
+    "clang-format",
     "stylua",
     "prettier",
   },
