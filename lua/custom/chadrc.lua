@@ -2,11 +2,6 @@
 local M = {}
 M.ui = {
   theme = "nightowl",
-  transparency = true,
-
-  statusline = {
-    theme = "minimal",
-  },
 
   nvdash = {
     load_on_startup = true,
